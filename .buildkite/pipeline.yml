@@ -1,4 +1,4 @@
 steps:
     - label: 'building the artifact'
       commands: 
-        - mvn clean
+        - mvn package
