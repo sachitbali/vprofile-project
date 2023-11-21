@@ -1,4 +1,9 @@
 steps:
     - label: 'building the artifact'
       commands: 
-        docker compose build
+        mvn package
+
+    - wait
+    - label: 'build docker image'
+      commands: 
+        docker compose build 
