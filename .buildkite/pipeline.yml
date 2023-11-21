@@ -3,7 +3,8 @@ steps:
       commands: 
         mvn package
 
-    - wait
-    - label: 'build docker image'
-      commands: 
-        docker compose build 
+    - label: "docker build images"
+      plugins:
+      - docker#v3.6.0:
+      command: docker compose build 
+
